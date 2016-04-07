@@ -1,3 +1,4 @@
+// business logic
 function allowDrop(ev) {
     ev.preventDefault();
 }
