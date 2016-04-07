@@ -43,8 +43,4 @@ function drop(event) {
 // user interface logic
 $(document).ready(function() {
 
-
-  // $("drag#tomato").click(function() {
-  //   var newProduce = new Produce();
-  // });
 });
