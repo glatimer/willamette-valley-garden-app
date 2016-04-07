@@ -23,10 +23,11 @@ function drag(event) {
 }
 
 function drop(event) {
-    event.preventDefault();
-    var data = event.dataTransfer.getData("text/plain", event.target.id);
-    event.target.appendChild(document.getElementById(data));
-    console.log(data.information())
+  event.preventDefault();
+  var data = event.dataTransfer.getData("text", event.target.id);
+  var newData = data + ".information()"
+  event.target.appendChild(document.getElementById(data));
+  console.log(data.sunshine)
 }
 
 
