@@ -1,5 +1,5 @@
 // business logic
-<<<<<<< HEAD
+
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -31,7 +31,10 @@ Produce.prototype.information = function() {
 
 // user interface logic
 $(document).ready(function() {
-  $("drag#tomato").click(function() {
+  $("").click(function() {
+    var newTomato = $("")
+
+
     var newProduce = new Produce();
   });
 });
