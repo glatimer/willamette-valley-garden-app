@@ -1,4 +1,18 @@
 // business logic
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+
 function Produce (item, sunshine, spacing, seedDepth, germination, harvest) {
   this.item = item,
   this.sunshine = sunshine,
@@ -8,39 +22,15 @@ function Produce (item, sunshine, spacing, seedDepth, germination, harvest) {
   this.harvest = harvest
 };
 
-var tomato = new Produce("tomato", "full-sunshine", "3 feet apart", "1/4 inch", "7-14 days", "80 days from seed")
+var tomato = new Produce("<li>Name: tomato</li>", "<li>Sun required: full-sunshine</li>", "<li>Spacing: 3 feet apart</li>", "<li>Seed Depth: 1/4 inch</li>", "<li>Germination: 7-14 days</li>", "<li>Harvest: 80 days from seed</li><br>")
 
 Produce.prototype.information = function() {
   return this.item + " " + this.sunshine + " " + this.spacing + " " + this.seedDepth + " " + this.germination + " " + this.harvest;
 }
 
-function allowDrop(event) {
-    event.preventDefault();
-}
-
-function drag(event) {
-    event.dataTransfer.setData("text", event.target.id);
-}
-
-function drop(event) {
-  event.preventDefault();
-  var data = event.dataTransfer.getData("text", event.target.id);
-  var newData = data + ".information()"
-  event.target.appendChild(document.getElementById(data));
-  console.log(data.sunshine)
-}
-
-
-
-
-
-
-
-
-
-
-
 // user interface logic
 $(document).ready(function() {
-
+  $("#tomato h1").click(function() {
+    $("#information").append(tomato.information());
+  });
 });
