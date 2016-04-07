@@ -1,18 +1,4 @@
 // business logic
-function allowDrop(ev) {
-    ev.preventDefault();
-}
-
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}
-
 function Produce (item, sunshine, spacing, seedDepth, germination, harvest) {
   this.item = item,
   this.sunshine = sunshine,
@@ -28,9 +14,36 @@ Produce.prototype.information = function() {
   return this.item + " " + this.sunshine + " " + this.spacing + " " + this.seedDepth + " " + this.germination + " " + this.harvest;
 }
 
+function allowDrop(event) {
+    event.preventDefault();
+}
+
+function drag(event) {
+    event.dataTransfer.setData("text", event.target.id);
+}
+
+function drop(event) {
+    event.preventDefault();
+    var data = event.dataTransfer.getData("text/plain", event.target.id);
+    event.target.appendChild(document.getElementById(data));
+    console.log(data.information())
+}
+
+
+
+
+
+
+
+
+
+
+
 // user interface logic
 $(document).ready(function() {
-  $("drag#tomato").click(function() {
-    var newProduce = new Produce();
-  });
+
+
+  // $("drag#tomato").click(function() {
+  //   var newProduce = new Produce();
+  // });
 });
