@@ -31,16 +31,11 @@ Produce.prototype.information = function() {
 // user interface logic
 $(document).ready(function() {
   $("").click(function() {
-
-    $("ul#instructions").append("<li>"this.item"</li>"
-                                "<li>"this.sunshine"</li>"
-                                "<li>"this.spacing"</li>"
-                                "<li>"this.seedDepth"</li>"
-                                "<li>"this.germination"</li>"
-                                "<li>"this.harvest"</li>");
-
-
-
     var newProduce = new Produce();
+    $("ul#instructions").append("<li>" + newProduce.information() + "</li>");
+
+
+
+
   });
 });
