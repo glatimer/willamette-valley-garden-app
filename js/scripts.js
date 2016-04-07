@@ -1,4 +1,3 @@
-// business logic
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -22,7 +21,7 @@ function Produce (item, sunshine, spacing, seedDepth, germination, harvest) {
   this.harvest = harvest
 };
 
-var tomato = new Produce("tomato", "full-sunshine", "3 feet apart", "1/4 inch", "7-14 days", "80 days from seed")
+var tomato = new Produce("<li>Name: tomato</li>", "<li>Sun required: full-sunshine</li>", "<li>Spacing: 3 feet apart</li>", "<li>Seed Depth: 1/4 inch</li>", "<li>Germination: 7-14 days</li>", "<li>Harvest: 80 days from seed</li><br>")
 
 Produce.prototype.information = function() {
   return this.item + " " + this.sunshine + " " + this.spacing + " " + this.seedDepth + " " + this.germination + " " + this.harvest;
@@ -30,12 +29,7 @@ Produce.prototype.information = function() {
 
 // user interface logic
 $(document).ready(function() {
-  $("").click(function() {
-    var newProduce = new Produce();
-    $("ul#instructions").append("<li>" + newProduce.information() + "</li>");
-
-
-
-
+  $("#tomato h1").click(function() {
+    $("#information").append(tomato.information());
   });
 });
