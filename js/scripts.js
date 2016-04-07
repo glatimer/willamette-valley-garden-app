@@ -1,5 +1,4 @@
 // business logic
-<<<<<<< HEAD
 function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -20,7 +19,7 @@ function Produce (item, sunshine, spacing, seedDepth, germination, harvest) {
   this.spacing = spacing,
   this.seedDepth = seedDepth,
   this.germination = germination,
-  this.harvest = harvest,
+  this.harvest = harvest
 };
 
 var tomato = new Produce("tomato", "full-sunshine", "3 feet apart", "1/4 inch", "7-14 days", "80 days from seed")
