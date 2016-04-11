@@ -10,7 +10,10 @@ function Produce (item, sunshine, spacing, seedDepth, germination, harvest) {
   this.harvest = harvest
 };
 
+var carrot = new Produce("<li>Name: carrot</li>", "<li>Sun required: carrot-sunshine</li>", "<li>Spacing: carrot feet apart</li>", "<li>Seed Depth: 1/4 carrot inches</li>", "<li>Germination: 7-14 carrot</li>", "<li>Harvest: 80 carrot from seed</li><br>")
 var tomato = new Produce("<li>Name: tomato</li>", "<li>Sun required: full-sunshine</li>", "<li>Spacing: 3 feet apart</li>", "<li>Seed Depth: 1/4 inch</li>", "<li>Germination: 7-14 days</li>", "<li>Harvest: 80 days from seed</li><br>")
+
+
 
 Produce.prototype.information = function() {
   return this.item + " " + this.sunshine + " " + this.spacing + " " + this.seedDepth + " " + this.germination + " " + this.harvest;
@@ -31,6 +34,11 @@ function drop(event) {
 
   if (data === "tomato") {
     console.log(tomato.information())
+    $("#information").append(tomato.information());
+  }
+  else if (data === "carrot") {
+    console.log(carrot.information())
+    $("#information").append(carrot.information());
   }
   else {
     console.console.log("fail");
