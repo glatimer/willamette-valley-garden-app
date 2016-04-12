@@ -1,9 +1,14 @@
 .square {
-    width:300px;
-    height:300px;
-    background-color: #999966;
+    width:150px;
+    height:150px;
+    background-color: white;
+    border: solid 2px black;
 }
-.v{
+
+table {
+  float: center;
+}
+/*.v{
     border-left:5px solid #000;
     border-right:5px solid #000;
 }
@@ -11,19 +16,21 @@
 .h{
     border-top:5px solid #000;
     border-bottom:5px solid #000;
-}
+}*/
 img {
   max-height: 150px;
   max-width: 150px;
 }
 
 
+#div1 #div2 #div3 #div4 #div5 #div6 #div7 #div8 #div9 #div10 #div11 #div12 #div13 #div14 #div15 #div16 #div17 #div18  {
+width:150px;height:150px;
+}
+body {
+  border: solid 50px #33659A;
+}
 
-
-.box {
-  width:350px;
-  height:350px;
-  padding:10px;
-  border:1px solid #aaaaaa;
-  margin: auto;
+h1 {
+  text-align: center;
+>>>>>>> refs/remotes/origin/master
 }

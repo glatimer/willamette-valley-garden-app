@@ -9,25 +9,103 @@
     <title>Willamette Valley Garden Planner</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <h1>Willamette Valley Garden Planner</h1>
+      <div class="row" align="center">
+        <img src="images/Tomato.png" alt="tomato" draggable="true" id="tomato" ondragstart="drag(event)">
 
-      <img src="images/Tomato.png" alt="tomato" draggable="true" id="tomato" ondragstart="drag(event)">
+        <img src="images/Carrot.png" alt="carrot" draggable="true" id="carrot" ondragstart="drag(event)">
+      </div>
+    </div>
 
-      <img src="images/Carrot.png" alt="carrot" draggable="true" id="carrot" ondragstart="drag(event)">
+    <div class="container-fluid">
+      <table align="center">
+        <tr>
+          <td>
+            <div class="square" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+          </td>
+          <td>
+            <div class="square" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+          </td>
+          <td>
+            <div class="square" id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+          </td>
+          <td>
+            <div class="square" id="div4" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+          </td>
+          <td>
+            <div class="square" id="div5" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+          </td>
+          <td>
+            <div class="square" id="div6" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="square" id="div7" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+          </td>
+          <td>
+            <div class="square" id="div8" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+          </td>
+          <td>
+            <div class="square" id="div9" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+          </td>
+          <td>
+            <div class="square" id="div10" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+          </td>
+          <td>
+            <div class="square" id="div11" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+          </td>
+          <td>
+            <div class="square" id="div12" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="square" id="div13" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+          </td>
+          <td>
+            <div class="square" id="div14" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+          </td>
+          <td>
+            <div class="square" id="div15" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+          </td>
+          <td>
+            <div class="square" id="div16" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+          </td>
+          <td>
+            <div class="square" id="div17" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+          </td>
+          <td>
+            <div class="square" id="div18" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
 
 
-      <!-- <table id='board' class="center">
-              <tr id="row1">
-                <td class="square" id="0"></td>
-                <td class="square v" id="1"></td>
-                <td class="square" id="2"></td>
-              </tr>
-      </table> -->
-      <div id="gardenBed">
+      <!-- <div id="gardenBed">
         <div id="div1" class="box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         <div id="div2" class="box" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-      </div>
+      </div> -->
 
 
       <div id="tomato">
@@ -36,6 +114,9 @@
       <div id="information">
         <ul></ul>
       </div>
+
+    <div id="information">
+      <ul></ul>
     </div>
   </body>
 </html>
