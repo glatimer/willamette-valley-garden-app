@@ -47,7 +47,7 @@ function drop(event) {
 
 // user interface logic
 $(document).ready(function() {
-  $("#tomato h1").click(function() {
-    $("#information").append(tomato.information());
-  });
+  // $("#tomato h1").click(function() {
+  //   $("#information").append(tomato.information());
+  // });
 });
