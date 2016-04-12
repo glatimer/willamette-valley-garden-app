@@ -9,13 +9,17 @@
     <title>Willamette Valley Garden Planner</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <h1>Willamette Valley Garden Planner</h1>
+      <div class="row" align="center">
+        <img src="images/Tomato.png" alt="tomato" draggable="true" id="tomato" ondragstart="drag(event)">
 
-      <img src="images/Tomato.png" alt="tomato" draggable="true" id="tomato" ondragstart="drag(event)">
+        <img src="images/Carrot.png" alt="carrot" draggable="true" id="carrot" ondragstart="drag(event)">
+      </div>
+    </div>
 
-      <img src="images/Carrot.png" alt="carrot" draggable="true" id="carrot" ondragstart="drag(event)">
-      <table class="center">
+    <div class="container-fluid">
+      <table align="center">
         <tr>
           <td>
             <div class="square" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -95,12 +99,12 @@
           </td>
         </tr>
       </table>
+    </div>
 
 
 
-      <div id="information">
-        <ul></ul>
-      </div>
+    <div id="information">
+      <ul></ul>
     </div>
   </body>
 </html>
