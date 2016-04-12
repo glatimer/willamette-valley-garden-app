@@ -30,7 +30,8 @@ function drag(event) {
 function drop(event) {
   event.preventDefault();
   var data = event.dataTransfer.getData("text");
-  event.target.appendChild(document.getElementById(data));
+  // event.target.appendChild(document.getElementById(data));
+  event.target.appendChild(document.getElementById(data).cloneNode(true));
 
   if (data === "tomato") {
     console.log(tomato.information())
