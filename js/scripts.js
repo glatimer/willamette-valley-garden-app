@@ -30,7 +30,7 @@ var thyme = new Produce("thyme", "Thyme", "full-sunshine", "1 inch", "1/4 inch",
 
 
 Produce.prototype.information = function() {
-  return "<div id='" + this.divid + "'> <li><h2>Name: " +this.item + "</h2></li> <li>Sun required: " + this.sunshine + "</li> <li>Spacing: " + this.spacing + "</li> <li>Seed Depth: " + this.seedDepth + "</li> <li>Germination: " + this.germination + "</li> <li>Harvest: " + this.harvest +"</li><br></div>";
+  return "<div id='" + this.divid + "'> <li><h2>" +this.item + "</h2></li> <li>Sun required: " + this.sunshine + "</li> <li>Spacing: " + this.spacing + "</li> <li>Seed Depth: " + this.seedDepth + "</li> <li>Germination: " + this.germination + "</li> <li>Harvest: " + this.harvest +"</li><br></div>";
 }
 
 function allowDrop(event) {
