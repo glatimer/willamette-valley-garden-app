@@ -45,21 +45,6 @@ function drop(event) {
   }
 }
 
-
-// if (data === "tomato") {
-//   // first delete tomato if it's there.
-//   $("#information").find("#tomato").remove();
-//   console.log(tomato.information())
-//   $("#information").append(tomato.information());
-// }
-// else if (data === "carrot") {
-//   $("#information").find("#carrot").remove();
-//   console.log(carrot.information())
-//   $("#information").append(carrot.information());
-// }
-// else {
-//   console.console.log("fail");
-
 // user interface logic
 $(document).ready(function() {
   $(".square").click(function() {
