@@ -1,6 +1,4 @@
 // business logic
-
-
 function Produce (divid, item, sunshine, spacing, seedDepth, germination, harvest) {
   this.divid = divid,
   this.item = item,
@@ -17,7 +15,7 @@ var tomato = new Produce("tomato", "tomato", "full-sunshine", "3 feet apart", "1
 
 var basil = new Produce("Basil", "Basil", "Basil", "Basil", "Basil", "Basil", "Basil")
 
-var fruit = [carrot, tomato, basil]
+var gardenItems = [carrot, tomato, basil]
 
 
 Produce.prototype.information = function() {
@@ -30,7 +28,6 @@ function allowDrop(event) {
 
 function drag(event) {
   event.dataTransfer.setData("text", event.target.id);
-
 }
 
 function drop(event) {
@@ -39,12 +36,11 @@ function drop(event) {
   var dataHash = "#" + data
   event.target.appendChild(document.getElementById(data).cloneNode(true));
 
-  for (var i=0; i < fruit.length; i++) {
-    if (data === fruit[i].item) {
-      console.log(fruit[i].item);
+  for (var i=0; i < gardenItems.length; i++) {
+    if (data === gardenItems[i].item) {
+      console.log(gardenItems[i].item);
       $("#information").find(dataHash).remove();
-      $("#information").append(fruit[i].information());
-
+      $("#information").append(gardenItems[i].information());
     }
   }
 }
