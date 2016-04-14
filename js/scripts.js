@@ -1,8 +1,7 @@
 
 // business logic
 
-function Produce (divid, item, sunshine, spacing, seedDepth, germination, harvest) {
-  this.divid = divid,
+function Produce (item, sunshine, spacing, seedDepth, germination, harvest) {
   this.item = item,
   this.sunshine = sunshine,
   this.spacing = spacing,
@@ -11,34 +10,34 @@ function Produce (divid, item, sunshine, spacing, seedDepth, germination, harves
   this.harvest = harvest
 };
 
-var basil = new Produce("basil", "Basil", "full-sunshine", "1 inch apart", "1/4 inch", "7-14 days", "24 days from seed");
+// var basil = new Produce("Basil", "full-sunshine", "1 inch apart", "1/4 inch", "7-14 days", "24 days from seed");
+//
+// var beetroot = new Produce("Beetroot", "full-sunshine", "1 inch apart", "1/2 inch", "5-10 days", "65 days from seed");
+//
+// var cabbage = new Produce("Cabbage", "full-sunshine", "18 inches apart", "3/4 inch", "12-14 days", "58 days from seed");
 
-var beetroot = new Produce("beetroot", "Beetroot", "full-sunshine", "1 inch apart", "1/2 inch", "5-10 days", "65 days from seed");
+var carrot = new Produce("Carrot", "full-sunshine", "2 inches apart", "1/4 carrot inches", "14-21 days", "55 days from seed");
 
-var cabbage = new Produce("cabbage", "Cabbage", "full-sunshine", "18 inches apart", "3/4 inch", "12-14 days", "58 days from seed");
+// var eggplant = new Produce("Eggplant", "full-sunshine", "2.5 feet apart", "1/4  inches", "10-21 days", "90 days from seed");
+//
+// var lavender = new Produce("Lavender", "full-sunshine", "2 feet apart", "1/4  inches", "21-35 days", "57 days from seed");
+//
+// var peas = new Produce("Sugar Snap Peas", "full-sunshine", "2-3 inches", "1 inch", "7-10 days", "62 days from seed")
+//
+// var pepper = new Produce(Red Bell Pepper", "full-sunshine", "1 inch", "1/4 inch", "10-21 days", "74-76 days from transplant");
+//
+// var radish = new Produce(Radish", "full-sunshine", "1 inch", "1/2 inch", "5-7 days", "50-60 days from seed");
+//
+// var rosemary = new Produce("Rosemary", "full-sunshine", "2 inches", "5-10 days", "66 days from seed");
 
-var carrot = new Produce("carrot", "Carrot", "full-sunshine", "2 inches apart", "1/4 carrot inches", "14-21 days", "55 days from seed");
-
-var eggplant = new Produce("eggplant", "Eggplant", "full-sunshine", "2.5 feet apart", "1/4  inches", "10-21 days", "90 days from seed");
-
-var lavender = new Produce("lavender", "Lavender", "full-sunshine", "2 feet apart", "1/4  inches", "21-35 days", "57 days from seed");
-
-var peas = new Produce("peas", "Sugar Snap Peas", "full-sunshine", "2-3 inches", "1 inch", "7-10 days", "62 days from seed");
-
-var pepper = new Produce("pepper", "Red Bell Pepper", "full-sunshine", "1 inch", "1/4 inch", "10-21 days", "74-76 days from transplant");
-
-var radish = new Produce("radish", "Radish", "full-sunshine", "1 inch", "1/2 inch", "5-7 days", "50-60 days from seed");
-
-var rosemary = new Produce("rosemary", "Rosemary", "full-sunshine", "2 inches", "5-10 days", "66 days from seed");
-
-var tomato = new Produce("tomato", "Tomato", "full-sunshine", "3 feet apart", "1/4 inch", "7-14 days", "80 days from seed");
+var tomato = new Produce("Tomato", "full-sunshine", "3 feet apart", "1/4 inch", "7-14 days", "80 days from seed");
 
 var gardenItems = [carrot, tomato];
 
 
 
 Produce.prototype.information = function() {
-  return "<div id='" + this.divid + "'> <li><h2>" +this.item + "</h2></li> <li>Sun required: " + this.sunshine + "</li> <li>Spacing: " + this.spacing + "</li> <li>Seed Depth: " + this.seedDepth + "</li> <li>Germination: " + this.germination + "</li> <li>Harvest: " + this.harvest +"</li><br></div>";
+    return "<li> <h2>" + this.item + "</h2> </li> <li>Sun Required: " + this.sunshine + "</li> <li>Spacing: " + this.spacing + "</li> <li>Seed Depth: " + this.seedDepth + "</li> <li>Germination: " + this.germination + "</li> <li>Harvest: " + this.harvest +"</li><br></div>";
 }
 
 function allowDrop(event) {
