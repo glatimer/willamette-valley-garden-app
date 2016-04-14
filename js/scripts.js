@@ -33,7 +33,7 @@ function drag(event) {
 function drop(event) {
   event.preventDefault();
   var data = event.dataTransfer.getData("text");
-  $("#div1").empty();
+  // $("#div1").empty();
   // event.target.appendChild(document.getElementById(data));
 
 

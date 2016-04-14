@@ -26,6 +26,7 @@ width:150px;height:150px;
 }
 body {
   border: solid 50px #33659A;
+  padding-bottom: 1000px;
 }
 
 .jumbotron {
