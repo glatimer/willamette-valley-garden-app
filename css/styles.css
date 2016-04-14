@@ -1,14 +1,19 @@
 .square {
-    width:150px;
-    height:150px;
+    width:100px;
+    height:100px;
     background-color: white;
     border: solid 2px black;
 }
 
 #sidebar {
-  margin-left: 30px;
-  padding-left: 30px;
+  border: dotted 3px #FFFEF3;
+  background-color: #d4d8cd;
   float: left;
+  padding: 20px;
+}
+
+#draggable-images {
+  margin-bottom: 30px;
 }
 
 table {
@@ -16,8 +21,8 @@ table {
 }
 
 img {
-  max-height: 150px;
-  max-width: 150px;
+  max-height: 100px;
+  max-width: 100px;
 }
 
 
@@ -26,6 +31,8 @@ width:150px;height:150px;
 }
 
 body {
+  padding-left: 30px;
+  padding-right: 30px;
   border: solid 50px #33659A;
   padding-bottom: 1000px;
 }
