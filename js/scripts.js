@@ -15,6 +15,9 @@ var carrot = new Produce("carrot", "carrot", "carrot-sunshine", "carrot feet apa
 
 var tomato = new Produce("tomato", "tomato", "full-sunshine", "3 feet apart", "1/4 inch", "7-14 days", "80 days from seed")
 
+var basil = new Produce("Basil", "Basil", "Basil", "Basil", "Basil", "Basil", "Basil")
+
+var fruit = [carrot, tomato, basil]
 
 
 Produce.prototype.information = function() {
@@ -33,35 +36,37 @@ function drag(event) {
 function drop(event) {
   event.preventDefault();
   var data = event.dataTransfer.getData("text");
-  $("#div1").empty();
-  // event.target.appendChild(document.getElementById(data));
-
-
+  var dataHash = "#" + data
   event.target.appendChild(document.getElementById(data).cloneNode(true));
 
+  for (var i=0; i < fruit.length; i++) {
+    if (data === fruit[i].item) {
+      console.log(fruit[i].item);
+      $("#information").find(dataHash).remove();
+      $("#information").append(fruit[i].information());
 
-  if (data === "tomato") {
-    // first delete tomato if it's there.
-    $("#information").find("#tomato").remove();
-    console.log(tomato.information())
-    $("#information").append(tomato.information());
-  }
-  else if (data === "carrot") {
-    $("#information").find("#carrot").remove();
-    console.log(carrot.information())
-    $("#information").append(carrot.information());
-  }
-  else {
-    console.console.log("fail");
+    }
   }
 }
 
 
+// if (data === "tomato") {
+//   // first delete tomato if it's there.
+//   $("#information").find("#tomato").remove();
+//   console.log(tomato.information())
+//   $("#information").append(tomato.information());
+// }
+// else if (data === "carrot") {
+//   $("#information").find("#carrot").remove();
+//   console.log(carrot.information())
+//   $("#information").append(carrot.information());
+// }
+// else {
+//   console.console.log("fail");
 
 // user interface logic
 $(document).ready(function() {
   $(".square").click(function() {
     $(this).empty();
-    console.log("test");
   });
 });
