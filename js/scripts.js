@@ -1,7 +1,8 @@
 // business logic
 
 
-function Produce (item, sunshine, spacing, seedDepth, germination, harvest) {
+function Produce (divid, item, sunshine, spacing, seedDepth, germination, harvest) {
+  this.divid = divid,
   this.item = item,
   this.sunshine = sunshine,
   this.spacing = spacing,
@@ -10,13 +11,14 @@ function Produce (item, sunshine, spacing, seedDepth, germination, harvest) {
   this.harvest = harvest
 };
 
-var carrot = new Produce("<li>Name: carrot</li>", "<li>Sun required: carrot-sunshine</li>", "<li>Spacing: carrot feet apart</li>", "<li>Seed Depth: 1/4 carrot inches</li>", "<li>Germination: 7-14 carrot</li>", "<li>Harvest: 80 carrot from seed</li><br>")
-var tomato = new Produce("<li>Name: tomato</li>", "<li>Sun required: full-sunshine</li>", "<li>Spacing: 3 feet apart</li>", "<li>Seed Depth: 1/4 inch</li>", "<li>Germination: 7-14 days</li>", "<li>Harvest: 80 days from seed</li><br>")
+var carrot = new Produce("carrot", "carrot", "carrot-sunshine", "carrot feet apart", "1/4 carrot inches", "7-14 carrot", "80 carrot from seed")
+
+var tomato = new Produce("tomato", "tomato", "full-sunshine", "3 feet apart", "1/4 inch", "7-14 days", "80 days from seed")
 
 
 
 Produce.prototype.information = function() {
-  return this.item + " " + this.sunshine + " " + this.spacing + " " + this.seedDepth + " " + this.germination + " " + this.harvest;
+  return "<div id='" + this.divid + "'> <li>Name: " +this.item + "</li> <li>Sun required: " + this.sunshine + "</li> <li>Spacing: " + this.spacing + "</li> <li>Seed Depth: " + this.seedDepth + "</li> <li>Germination: " + this.germination + "</li> <li>Harvest: " + this.harvest +"</li><br></div>";
 }
 
 function allowDrop(event) {
@@ -38,12 +40,14 @@ function drop(event) {
   event.target.appendChild(document.getElementById(data).cloneNode(true));
 
 
-
   if (data === "tomato") {
+    // first delete tomato if it's there.
+    $("#information").find("#tomato").remove();
     console.log(tomato.information())
     $("#information").append(tomato.information());
   }
   else if (data === "carrot") {
+    $("#information").find("#carrot").remove();
     console.log(carrot.information())
     $("#information").append(carrot.information());
   }
